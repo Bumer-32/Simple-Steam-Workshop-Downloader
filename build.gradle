@@ -1,0 +1,18 @@
+plugins {
+    id "org.jetbrains.kotlin.jvm" version "2.1.21"
+}
+
+group = "ua.pp.lumivoid"
+version = "1.0-SNAPSHOT"
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+
+}
+
+kotlin {
+    jvmToolchain(21)
+}
