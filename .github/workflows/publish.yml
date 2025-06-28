@@ -55,6 +55,6 @@ jobs:
         uses: ncipollo/release-action@v1.12.0
         with:
           tag: Release
-          artifacts: "release.zip"
+          artifacts: "build/libs/release.zip"
           token: ${{ secrets.GITHUB_TOKEN }}
           allowUpdates: true
