@@ -6,7 +6,15 @@ import org.slf4j.LoggerFactory
 
 
 fun main() {
-    Main.main()
+    val logger = LoggerFactory.getLogger("MainKt")
+
+    try {
+        Main.main()
+    } catch (e: Exception) {
+        logger.error("Fatal error when running program")
+        e.stackTrace.forEach { trace -> logger.error(trace.toString()) }
+        throw e
+    }
 }
 
 object Main {
