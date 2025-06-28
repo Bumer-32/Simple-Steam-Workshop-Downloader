@@ -100,7 +100,7 @@ object SteamCMD {
         if (!modsFolder.exists()) modsFolder.mkdirs()
 
         val workshopFolder = File(Constants.STEAMCMD_FOLDER_PATH, "steamapps/workshop/content/")
-        if (workshopFolder.exists() and workshopFolder.listFiles().isNotEmpty()) {
+        if (workshopFolder.exists() && workshopFolder.listFiles() != null && workshopFolder.listFiles().isNotEmpty()) {
             workshopFolder.listFiles().forEach { file -> file.delete() }
         }
 
