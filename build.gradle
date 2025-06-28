@@ -1,6 +1,8 @@
+//file:noinspection GroovyAssignabilityCheck
 plugins {
     id "org.jetbrains.kotlin.jvm" version "2.1.21"
     id "com.github.johnrengelman.shadow" version "8.1.1"
+    id "maven-publish"
 }
 
 group = "ua.pp.lumivoid"
@@ -34,4 +36,28 @@ jar {
 
 processResources {
     from("LICENSE")
+}
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            groupId = group
+            artifactId = "SSWD"
+            version = version
+
+            artifact shadowJar
+        }
+    }
+
+    repositories {
+        maven {
+            name = "Lumivoid"
+            url = "https://maven.lumivoid.pp.ua/releases"
+
+            credentials {
+                username = System.getenv("MAVEN_NAME")
+                password = System.getenv("MAVEN_SECRET")
+            }
+        }
+    }
 }
