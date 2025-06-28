@@ -30,4 +30,5 @@ jar {
     manifest {
         attributes "Main-Class": "ua.pp.lumivoid.MainKt"
     }
+    from("LICENSE")
 }
