@@ -8,6 +8,10 @@ in fact it's just a little parser and SteamCMD automatization
 > If you need create in root of program folder file "path.txt" and in first line specify download path  
 > Run program and get in mods folder or in your folder workshops you need (already renamed)
 
+# Download
+> From https://github.com/Bumer-32/Simple-Steam-Workshop-Downloader/releases
+> OR
+> From https://maven.lumivoid.pp.ua
 
 >This program automatically downloads SteamCMD from the official Valve source.  
 > All rights to SteamCMD belong to Valve Corporation.
